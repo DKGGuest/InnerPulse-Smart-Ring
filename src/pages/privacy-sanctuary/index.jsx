@@ -100,7 +100,7 @@ const PrivacySanctuary = () => {
 
   const handleSectionChange = (sectionId) => {
     setActiveSection(sectionId);
-    
+
     // Smooth scroll to section
     const element = document.getElementById(`section-${sectionId}`);
     if (element) {
@@ -149,16 +149,16 @@ const PrivacySanctuary = () => {
               </div>
               <div className="w-4 h-4 bg-accent rounded-full animate-empathy-pulse"></div>
             </div>
-            
+
             <h1 className="text-4xl lg:text-6xl font-heading font-semibold text-text-primary mb-6">
               Privacy Sanctuary
               <span className="block text-2xl lg:text-3xl text-primary-600 mt-2">
                 Your Memory Vault
               </span>
             </h1>
-            
+
             <p className="text-xl text-text-secondary max-w-3xl mx-auto mb-8">
-              Experience complete transparency in how your wellness data is protected, stored, and controlled. 
+              Experience complete transparency in how your wellness data is protected, stored, and controlled.
               Our Memory Vault gives you unprecedented visibility into your digital privacy.
             </p>
 
@@ -166,44 +166,43 @@ const PrivacySanctuary = () => {
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-8">
               <button
                 onClick={toggleVoiceNavigation}
-                className={`flex items-center space-x-2 px-6 py-3 rounded-brand transition-whisper whisper-ripple ${
-                  isVoiceEnabled 
-                    ? 'bg-primary text-white shadow-gentle' 
+                className={`flex items-center space-x-2 px-6 py-3 rounded-brand transition-whisper whisper-ripple ${isVoiceEnabled
+                    ? 'bg-primary text-white shadow-gentle'
                     : 'bg-surface text-text-secondary hover:bg-primary/10'
-                }`}
+                  }`}
               >
                 <Icon name={isVoiceEnabled ? 'VolumeX' : 'Volume2'} size={20} />
                 <span className="font-medium">
                   {isVoiceEnabled ? 'Disable' : 'Enable'} Voice Navigation
                 </span>
               </button>
-              
+
               <div className="text-sm text-text-secondary">
                 Navigate with voice commands for enhanced accessibility
               </div>
             </div>
           </div>
-          
+
           {/* 💡 AI Health Companion Description */}
-        <div className="text-center lg:text-left">
-          <h2 className="font-heading text-2xl font-bold text-text-primary mb-2">
-            Secure Intelligence for Your Wellness Journey
-          </h2>
-          <p className="text-text-secondary text-base max-w-3xl">
-            A revolutionary AI health companion that understands you — it talks to you, reads your body through a smart ring, and gives real-time tips to improve your mind and body. Built with strong data privacy and medical-grade security, it’s the future of personal healthcare: proactive, personalized, and always with you — safely.
-          </p>
-        </div>
-        {/* 💡 AI Health Companion Prompt */}
-        <div className="text-center lg:text-left">
-          <h2 className="font-heading text-2xl font-bold text-text-primary mb-2">
-            Meet Your AI-Powered Health Ally
-          </h2>
-          <p className="text-text-secondary text-base max-w-3xl">
-            A revolutionary AI health companion that understands you — it talks to you, reads your body through a smart ring, and gives real-time tips to improve your mind and body.
-            It’s the future of personal healthcare: proactive, personalized, and always with you.
-          </p>
-        </div>
-          
+          <div className="text-center lg:text-left">
+            <h2 className="font-heading text-2xl font-bold text-text-primary mb-2">
+              Secure Intelligence for Your Wellness Journey
+            </h2>
+            <p className="text-text-secondary text-base max-w-3xl">
+              A revolutionary AI health companion that understands you — it talks to you, reads your body through a smart ring, and gives real-time tips to improve your mind and body. Built with strong data privacy and medical-grade security, it’s the future of personal healthcare: proactive, personalized, and always with you — safely.
+            </p>
+          </div>
+          {/* 💡 AI Health Companion Prompt */}
+          <div className="text-center lg:text-left">
+            <h2 className="font-heading text-2xl font-bold text-text-primary mb-2">
+              Meet Your AI-Powered Health Ally
+            </h2>
+            <p className="text-text-secondary text-base max-w-3xl">
+              A revolutionary AI health companion that understands you — it talks to you, reads your body through a smart ring, and gives real-time tips to improve your mind and body.
+              It’s the future of personal healthcare: proactive, personalized, and always with you.
+            </p>
+          </div>
+
 
           {/* Compliance Badges */}
           <div className="flex flex-wrap justify-center gap-4 mb-12">
@@ -228,11 +227,10 @@ const PrivacySanctuary = () => {
               <button
                 key={section.id}
                 onClick={() => handleSectionChange(section.id)}
-                className={`flex-shrink-0 flex items-center space-x-2 px-4 py-3 rounded-brand transition-whisper whisper-ripple ${
-                  activeSection === section.id
+                className={`flex-shrink-0 flex items-center space-x-2 px-4 py-3 rounded-brand transition-whisper whisper-ripple ${activeSection === section.id
                     ? 'bg-primary/20 text-primary-700 shadow-gentle'
                     : 'text-text-secondary hover:text-text-primary hover:bg-surface'
-                }`}
+                  }`}
               >
                 <Icon name={section.icon} size={18} />
                 <div className="text-left">
@@ -311,7 +309,7 @@ const PrivacySanctuary = () => {
               Built on Trust, Secured by Design
             </h2>
             <p className="text-lg text-text-secondary max-w-3xl mx-auto">
-              Your privacy isn't just a feature—it's the foundation of everything we build. 
+              Your privacy isn't just a feature—it's the foundation of everything we build.
               Experience technology that respects your cultural values and personal boundaries.
             </p>
           </div>
@@ -325,7 +323,7 @@ const PrivacySanctuary = () => {
                 User-Controlled
               </h3>
               <p className="text-text-secondary">
-                You decide what data to share, when to share it, and how long to keep it. 
+                You decide what data to share, when to share it, and how long to keep it.
                 Complete control in your hands.
               </p>
             </div>
@@ -338,7 +336,7 @@ const PrivacySanctuary = () => {
                 Culturally Aware
               </h3>
               <p className="text-text-secondary">
-                Privacy expectations vary by culture. Our system adapts to respect 
+                Privacy expectations vary by culture. Our system adapts to respect
                 regional values and legal requirements.
               </p>
             </div>
@@ -351,7 +349,7 @@ const PrivacySanctuary = () => {
                 Real-Time Transparency
               </h3>
               <p className="text-text-secondary">
-                Live updates on data usage, security status, and privacy controls. 
+                Live updates on data usage, security status, and privacy controls.
                 No hidden processes or unclear policies.
               </p>
             </div>
@@ -366,7 +364,7 @@ const PrivacySanctuary = () => {
               <p className="text-text-secondary mb-6">
                 Join thousands who've discovered wellness technology that truly respects their privacy and cultural values.
               </p>
-              
+
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link
                   to="/homepage-ai-wellness-platform"
@@ -377,19 +375,19 @@ const PrivacySanctuary = () => {
                 </Link>
 
                 <a
-        href="mailto:mdoffice@dkgrouplabs.com"
-        className="flex items-center justify-center space-x-2 px-6 py-3 border border-primary text-primary rounded-organic font-body font-medium gentle-transition haptic-feedback hover:bg-primary-100"
-      >
-        <Icon name="Mail" size={18} />
-        <span>Email Us</span>
-      </a>                
-                {/* <Link
-                  to="/how-it-works-ai-companion-demo"
+                  href="mailto:mdoffice@dkgrouplabs.com"
+                  className="flex items-center justify-center space-x-2 px-6 py-3 border border-primary text-primary rounded-organic font-body font-medium gentle-transition haptic-feedback hover:bg-primary-100"
+                >
+                  <Icon name="Mail" size={18} />
+                  <span>Email Us</span>
+                </a>
+                <Link
+                  to="/privacy-policy"
                   className="inline-flex items-center space-x-2 px-6 py-3 bg-primary text-white font-heading font-medium rounded-brand transition-whisper whisper-ripple hover:shadow-whisper hover:scale-105"
                 >
-                  <span>See How It Works</span>
-                  <Icon name="ArrowRight" size={20} />
-                </Link> */}
+                  <Icon name="FileText" size={20} />
+                  <span>View Full Legal Policy</span>
+                </Link>
               </div>
             </div>
           </div>

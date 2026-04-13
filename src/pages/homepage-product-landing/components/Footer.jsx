@@ -25,7 +25,7 @@ const Footer = () => {
       { label: 'Press', href: '#' }
     ],
     legal: [
-      { label: 'Privacy Policy', href: '#' },
+      { label: 'Privacy Policy', href: '/privacy-policy' },
       { label: 'Terms of Service', href: '#' },
       { label: 'Cookie Policy', href: '#' },
       { label: 'GDPR', href: '#' }
@@ -61,7 +61,7 @@ const Footer = () => {
                 SmartRing
               </span>
             </Link>
-            
+
             <p className="font-body text-gray-300 mb-6 leading-relaxed">
               Transforming emotional intelligence through innovative wearable technology. Join thousands of users on their journey to better mental wellness and self-awareness.
             </p>
@@ -134,12 +134,12 @@ const Footer = () => {
             <ul className="space-y-3">
               {footerLinks.legal.map((link, index) => (
                 <li key={index}>
-                  <a
-                    href={link.href}
+                  <Link
+                    to={link.href}
                     className="font-body text-gray-300 hover:text-white gentle-transition text-sm"
                   >
                     {link.label}
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>

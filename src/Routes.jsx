@@ -21,6 +21,7 @@ import CommunityStories from "pages/community-stories";
 import ResearchHub from "pages/research-hub";
 import RegistrationForm from "pages/Registeration/RegistrationForm";
 import OrderNow from "pages/Order-now/OrderNow";
+import PrivacyPolicy from "pages/privacy-policy";
 
 
 const Routes = () => {
@@ -42,9 +43,10 @@ const Routes = () => {
           <Route path="/emotion-insights-analytics" element={<EmotionInsightsAnalytics />} />
           <Route path="/how-it-works" element={<HowItWorks />} />
           <Route path="/privacy-sanctuary" element={<PrivacySanctuary />} />
-          <Route path="/wellness-resource-center" element={<WellnessResourceCenter />} />  
+          <Route path="/wellness-resource-center" element={<WellnessResourceCenter />} />
           <Route path="/community-stories" element={<CommunityStories />} />
           <Route path="/research-hub" element={<ResearchHub />} />
+          <Route path="/privacy-policy" element={<PrivacyPolicy />} />
         </RouterRoutes>
       </ErrorBoundary>
     </BrowserRouter>
