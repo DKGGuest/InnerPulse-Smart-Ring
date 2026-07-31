@@ -16,7 +16,7 @@ const PrivacyPolicy = () => {
                         </div>
                     </div>
                     <h1 className="text-4xl font-heading font-bold text-text-primary mb-4">
-                        Privacy Policy for Eva Smart Ring
+                        Privacy Policy for InnerPulse Smart Ring
                     </h1>
                     <p className="text-text-secondary font-body">
                         Last Updated: {lastUpdated}
@@ -26,7 +26,7 @@ const PrivacyPolicy = () => {
                 {/* Content */}
                 <div className="bg-white rounded-brand shadow-gentle p-8 lg:p-12 prose prose-slate max-w-none">
                     <p className="lead text-lg text-text-secondary mb-8">
-                        At Eva Smart Ring ("we," "our," or "us"), we are committed to protecting your privacy. This Privacy Policy explains how we collect, use, and safeguard your information when you visit our website, use the Eva Smart Ring, or interact with our mobile application.
+                        At InnerPulse Smart Ring ("we," "our," or "us"), we are committed to protecting your privacy. This Privacy Policy explains how we collect, use, and safeguard your information when you visit our website, use the InnerPulse Smart Ring, or interact with our mobile application.
                     </p>
 
                     <section className="mb-10">
@@ -44,11 +44,11 @@ const PrivacyPolicy = () => {
                             </li>
                             <li className="flex items-start">
                                 <Icon name="Check" size={18} className="text-success mt-1 mr-3 flex-shrink-0" />
-                                <span><strong>Health & Wellness Data:</strong> Because the Eva Smart Ring is a wearable health tracker, we collect biometric data such as heart rate, sleep patterns, body temperature, blood oxygen levels (SpO2), and activity metrics (steps, calories).</span>
+                                <span><strong>Health & Wellness Data:</strong> Because the InnerPulse Smart Ring is a wearable health tracker, we collect biometric data such as heart rate, sleep patterns, body temperature, blood oxygen levels (SpO2), and activity metrics (steps, calories).</span>
                             </li>
                             <li className="flex items-start">
                                 <Icon name="Check" size={18} className="text-success mt-1 mr-3 flex-shrink-0" />
-                                <span><strong>Device Information:</strong> Technical data such as your IP address, browser type, operating system, and the unique ID of your Eva Smart Ring.</span>
+                                <span><strong>Device Information:</strong> Technical data such as your IP address, browser type, operating system, and the unique ID of your InnerPulse Smart Ring.</span>
                             </li>
                             <li className="flex items-start">
                                 <Icon name="Check" size={18} className="text-success mt-1 mr-3 flex-shrink-0" />
@@ -76,7 +76,7 @@ const PrivacyPolicy = () => {
                             </li>
                             <li className="flex items-start">
                                 <Icon name="Activity" size={18} className="text-primary mt-1 mr-3 flex-shrink-0" />
-                                <span><strong>Order Fulfillment:</strong> To process transactions and ship your Eva Smart Ring.</span>
+                                <span><strong>Order Fulfillment:</strong> To process transactions and ship your InnerPulse Smart Ring.</span>
                             </li>
                             <li className="flex items-start">
                                 <Icon name="Activity" size={18} className="text-primary mt-1 mr-3 flex-shrink-0" />
@@ -157,7 +157,7 @@ const PrivacyPolicy = () => {
                             Children’s Privacy
                         </h2>
                         <p className="text-text-secondary leading-relaxed">
-                            The Eva Smart Ring is not intended for use by individuals under the age of 13 (or 16 in certain jurisdictions). We do not knowingly collect personal data from children.
+                            The InnerPulse Smart Ring is not intended for use by individuals under the age of 13 (or 16 in certain jurisdictions). We do not knowingly collect personal data from children.
                         </p>
                     </section>
 

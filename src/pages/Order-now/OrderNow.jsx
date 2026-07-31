@@ -4,19 +4,22 @@ import { useLocation } from "react-router-dom";
 const OrderNow = () => {
   const location = useLocation();
   const { name, image, price, selectedPayment } = location.state || {
-    name: "EVA Smart Ring",
+    name: "InnerPulse Smart Ring",
     image: "/assets/images/ProductShowcaseRing.png",
     price: 3499,
     selectedPayment: undefined
   };
   const [showQR, setShowQR] = useState(false);
 
-  // Show QRimage.png for full payment, QR_UPI_EVA_SMART_RING.png for pre-order deposit
+  // Show QRimage.png for full payment, QR_UPI_InnerPulse_SMART_RING.png for pre-order deposit
   const qrImageSrc = selectedPayment === 'deposit'
-    ? "/assets/images/QR_UPI_EVA_SMART_RING.png"
-    : "/assets/images/QRimage.png";
+    // ? "/assets/images/QR_UPI_EVA_SMART_RING.png"
+    ? "/assets/images/QR_UPI_InnerPulse_SMART_RING.png"
+    // : "/assets/images/QRimage.png";
+    : "/assets/images/QR_UPI_InnerPulse_SMART_RING.png";
+
   const qrAlt = selectedPayment === 'deposit'
-    ? "EVA Smart Ring UPI QR"
+    ? "InnerPulse Smart Ring UPI QR"
     : "Scan to Pay";
 
   return (

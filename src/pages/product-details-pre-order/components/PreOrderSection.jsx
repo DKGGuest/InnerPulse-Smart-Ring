@@ -240,7 +240,7 @@ const PreOrderSection = ({ quantity, setQuantity, onAddToCart, isAddedToCart, pr
     // Always navigate to /order-now with correct price and payment type
     navigate('/order-now', {
       state: {
-        name: 'EVA Smart Ring',
+        name: 'InnerPulse Smart Ring',
         image: '/assets/images/ProductShowcaseRing.png',
         price: selectedPayment === 'deposit' ? 1000 : selectedOption.amount * quantity - (selectedOption.savings * quantity),
         quantity,

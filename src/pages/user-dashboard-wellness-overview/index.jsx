@@ -11,7 +11,7 @@ import AchievementBadges from './components/AchievementBadges';
 
 const UserDashboardWellnessOverview = () => {
   const [currentTime, setCurrentTime] = useState(new Date());
-  const [userName] = useState('EVA');
+  const [userName] = useState('InnerPulse');
 
   useEffect(() => {
     const timer = setInterval(() => {
@@ -151,14 +151,14 @@ const UserDashboardWellnessOverview = () => {
           <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between">
             <div className="mb-4 sm:mb-0">
               <h1 className="font-heading font-bold text-2xl lg:text-3xl text-text-primary mb-2">
-  Welcome back to {userName}! 👋
-</h1>
-<p className="text-base lg:text-lg text-gray-1200 mb-3">
-  Your health data is synced and ready.
-</p>
-<p className="font-body text-text-secondary">
-  {formatDate(currentTime)} • {formatTime(currentTime)}
-</p>
+                Welcome back to {userName}! 👋
+              </h1>
+              <p className="text-base lg:text-lg text-gray-1200 mb-3">
+                Your health data is synced and ready.
+              </p>
+              <p className="font-body text-text-secondary">
+                {formatDate(currentTime)} • {formatTime(currentTime)}
+              </p>
             </div>
             <div className="flex items-center space-x-4">
               <div className="hidden sm:flex items-center space-x-2 px-4 py-2 bg-background rounded-organic border border-border-light">
@@ -245,17 +245,16 @@ const UserDashboardWellnessOverview = () => {
               <div className="space-y-4">
                 {recentActivities.map((activity) => (
                   <div key={activity.id} className="flex items-start space-x-3 p-3 rounded-organic hover:bg-surface gentle-transition">
-                    <div className={`w-8 h-8 rounded-organic flex items-center justify-center ${
-                      activity.type === 'journal' ? 'bg-primary-100' :
-                      activity.type === 'meditation'? 'bg-secondary-100' : 'bg-accent-100'
-                    }`}>
-                      <Icon 
-                        name={activity.icon} 
-                        size={16} 
+                    <div className={`w-8 h-8 rounded-organic flex items-center justify-center ${activity.type === 'journal' ? 'bg-primary-100' :
+                        activity.type === 'meditation' ? 'bg-secondary-100' : 'bg-accent-100'
+                      }`}>
+                      <Icon
+                        name={activity.icon}
+                        size={16}
                         color={
                           activity.type === 'journal' ? 'var(--color-primary)' :
-                          activity.type === 'meditation' ? 'var(--color-secondary)' :
-                          'var(--color-accent)'
+                            activity.type === 'meditation' ? 'var(--color-secondary)' :
+                              'var(--color-accent)'
                         }
                       />
                     </div>
@@ -332,14 +331,14 @@ const UserDashboardWellnessOverview = () => {
             </Link>
 
             <a
-        href="mailto:mdoffice@dkgrouplabs.com"
-        className="flex items-center justify-center space-x-2 px-6 py-3 border border-text-inverse text-text-inverse rounded-organic font-body font-medium gentle-transition haptic-feedback hover:bg-white hover:bg-opacity-10"
-      >
-        <Icon name="Mail" size={18} />
-        <span>Email Us</span>
-      </a>
+              href="mailto:mdoffice@dkgrouplabs.com"
+              className="flex items-center justify-center space-x-2 px-6 py-3 border border-text-inverse text-text-inverse rounded-organic font-body font-medium gentle-transition haptic-feedback hover:bg-white hover:bg-opacity-10"
+            >
+              <Icon name="Mail" size={18} />
+              <span>Email Us</span>
+            </a>
 
-    
+
           </div>
         </div>
       </div>
