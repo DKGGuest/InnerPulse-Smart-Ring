@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import Icon from 'components/AppIcon';
 
 const PrivacyPolicy = () => {
-    const lastUpdated = "April 13, 2026";
+    const lastUpdated = "August 17, 2026";
 
     return (
         <div className="min-h-screen bg-cream/30 pt-24 pb-16">
@@ -28,6 +28,32 @@ const PrivacyPolicy = () => {
                     <p className="lead text-lg text-text-secondary mb-8">
                         At InnerPulse Smart Ring ("we," "our," or "us"), we are committed to protecting your privacy. This Privacy Policy explains how we collect, use, and safeguard your information when you visit our website, use the InnerPulse Smart Ring, or interact with our mobile application.
                     </p>
+
+                    {/* Google Play & Regulatory Compliance Callout Banner */}
+                    <div className="bg-amber-50/80 border border-amber-200/80 rounded-2xl p-6 mb-10 text-amber-950 not-prose shadow-sm">
+                        <div className="flex items-center space-x-3 mb-3">
+                            <div className="w-9 h-9 bg-amber-500/15 rounded-xl flex items-center justify-center flex-shrink-0">
+                                <Icon name="AlertTriangle" size={20} className="text-amber-700" />
+                            </div>
+                            <h3 className="text-lg font-heading font-bold text-amber-900 m-0">
+                                Important Notice: Hardware Requirement & Health Disclaimer
+                            </h3>
+                        </div>
+                        <ul className="space-y-2.5 text-sm text-amber-900/90 pl-1 m-0">
+                            <li className="flex items-start">
+                                <Icon name="Cpu" size={16} className="text-amber-700 mt-0.5 mr-2.5 flex-shrink-0" />
+                                <span><strong>External Hardware Required:</strong> InnerPulse requires a compatible InnerPulse Smart Ring (paired via Bluetooth Low Energy) to collect and display health and fitness metrics. This app/platform cannot function independently as a biometric tracker without the physical smart ring hardware.</span>
+                            </li>
+                            <li className="flex items-start">
+                                <Icon name="ShieldAlert" size={16} className="text-amber-700 mt-0.5 mr-2.5 flex-shrink-0" />
+                                <span><strong>Not a Medical Device:</strong> InnerPulse and the InnerPulse Smart Ring are intended solely for general fitness, wellness, and lifestyle monitoring. InnerPulse is NOT a medical device and is NOT intended to diagnose, treat, cure, mitigate, or prevent any disease, illness, or medical condition.</span>
+                            </li>
+                            <li className="flex items-start">
+                                <Icon name="Stethoscope" size={16} className="text-amber-700 mt-0.5 mr-2.5 flex-shrink-0" />
+                                <span><strong>Consult a Healthcare Professional:</strong> InnerPulse does not provide medical advice, diagnosis, or treatment. Always consult a qualified physician or healthcare professional before making any health, exercise, or lifestyle decisions or if you have questions regarding a medical condition.</span>
+                            </li>
+                        </ul>
+                    </div>
 
                     <section className="mb-10">
                         <h2 className="text-2xl font-heading font-semibold text-text-primary mb-4 flex items-center">
@@ -174,19 +200,60 @@ const PrivacyPolicy = () => {
                     <section className="mb-10">
                         <h2 className="text-2xl font-heading font-semibold text-text-primary mb-4 flex items-center">
                             <span className="w-8 h-8 bg-primary/10 rounded-full flex items-center justify-center mr-3 text-primary text-sm">8</span>
+                            Health Content & Medical Disclaimer
+                        </h2>
+                        <p className="text-text-secondary mb-4">
+                            Please review the following disclaimers regarding health tracking, external hardware requirements, and medical advice:
+                        </p>
+                        <div className="space-y-4 not-prose">
+                            <div className="p-4 bg-slate-50 border border-slate-200 rounded-xl">
+                                <h3 className="font-semibold text-text-primary mb-1.5 flex items-center text-base">
+                                    <Icon name="Cpu" size={18} className="text-primary mr-2 flex-shrink-0" />
+                                    8.1 External Hardware Requirement
+                                </h3>
+                                <p className="text-sm text-text-secondary leading-relaxed m-0">
+                                    The InnerPulse application is designed exclusively to pair with compatible external InnerPulse Smart Ring hardware via Bluetooth Low Energy (BLE). The application cannot independently collect, calculate, or display biometric metrics (such as heart rate, SpO2, sleep stages, or skin temperature) without being connected to an operational InnerPulse Smart Ring.
+                                </p>
+                            </div>
+
+                            <div className="p-4 bg-slate-50 border border-slate-200 rounded-xl">
+                                <h3 className="font-semibold text-text-primary mb-1.5 flex items-center text-base">
+                                    <Icon name="Activity" size={18} className="text-primary mr-2 flex-shrink-0" />
+                                    8.2 General Wellness & Non-Medical Device Status
+                                </h3>
+                                <p className="text-sm text-text-secondary leading-relaxed m-0">
+                                    InnerPulse and the InnerPulse Smart Ring are intended strictly for general fitness, sleep tracking, stress awareness, and lifestyle monitoring. They are <strong>NOT medical devices</strong> and have not been evaluated as medical devices by the FDA, EMA, or any medical regulatory authority. They are not intended for clinical use, medical diagnosis, treatment, cure, mitigation, or prevention of any disease or health condition.
+                                </p>
+                            </div>
+
+                            <div className="p-4 bg-slate-50 border border-slate-200 rounded-xl">
+                                <h3 className="font-semibold text-text-primary mb-1.5 flex items-center text-base">
+                                    <Icon name="Stethoscope" size={18} className="text-primary mr-2 flex-shrink-0" />
+                                    8.3 Physician Consultation & AI Wellness Guidance
+                                </h3>
+                                <p className="text-sm text-text-secondary leading-relaxed m-0">
+                                    Insights, trends, and recommendations provided by the app—including interactions with the AURA AI Wellness Guide—are provided solely for informational and general wellness reference. Never disregard professional medical advice or delay seeking it because of something you have read or measured on InnerPulse. Always consult a qualified physician or healthcare provider prior to making health or lifestyle changes.
+                                </p>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section className="mb-10">
+                        <h2 className="text-2xl font-heading font-semibold text-text-primary mb-4 flex items-center">
+                            <span className="w-8 h-8 bg-primary/10 rounded-full flex items-center justify-center mr-3 text-primary text-sm">9</span>
                             Contact Us
                         </h2>
                         <p className="text-text-secondary mb-4">
                             If you have questions about this Privacy Policy, please contact us at:
                         </p>
-                        <div className="bg-surface p-6 rounded-organic border border-border">
+                        <div className="bg-surface p-6 rounded-organic border border-border not-prose">
                             <div className="flex items-center space-x-3 mb-2">
                                 <Icon name="Mail" size={20} className="text-primary" />
                                 <a href="mailto:mdoffice@dkgrouplabs.com" className="text-primary font-medium hover:underline">
                                     mdoffice@dkgrouplabs.com
                                 </a>
                             </div>
-                            <p className="text-sm text-text-secondary">
+                            <p className="text-sm text-text-secondary m-0">
                                 Our team is available to address any privacy-related concerns you may have.
                             </p>
                         </div>
@@ -216,3 +283,4 @@ const PrivacyPolicy = () => {
 };
 
 export default PrivacyPolicy;
+
