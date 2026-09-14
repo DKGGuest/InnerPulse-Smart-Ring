@@ -3,11 +3,12 @@ import { useLocation } from "react-router-dom";
 
 const OrderNow = () => {
   const location = useLocation();
-  const { name, image, price, selectedPayment } = location.state || {
+  const { name, image, price, selectedPayment, currencySymbol } = location.state || {
     name: "InnerPulse Smart Ring",
     image: "/assets/images/ProductShowcaseRing.png",
-    price: 3499,
-    selectedPayment: undefined
+    price: 3999,
+    selectedPayment: undefined,
+    currencySymbol: '₹'
   };
   const [showQR, setShowQR] = useState(false);
 
@@ -39,7 +40,7 @@ const OrderNow = () => {
         <p className="text-lg text-text-secondary mb-6 animate-fade-in delay-300 text-center">
           Experience the next generation of wellness technology. Order your {name} now and get it delivered fast!
         </p>
-        <div className="text-xl font-bold mb-6 text-primary">INR{price}</div>
+        <div className="text-xl font-bold mb-6 text-primary">{currencySymbol}{price}</div>
         <button
           className="w-full inline-flex items-center justify-center space-x-2 px-8 py-4 bg-primary text-text-inverse rounded-organic font-body font-semibold gentle-transition haptic-feedback hover:bg-primary-600 disabled:opacity-50 disabled:cursor-not-allowed text-lg animate-fade-in delay-400 transition-all duration-300 hover:scale-[1.03]"
           onClick={() => alert('Order placed!')}

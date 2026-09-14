@@ -6,7 +6,6 @@ import GentleMonitoring from './components/GentleMonitoring';
 import EmpatheticJournaling from './components/EmpatheticJournaling';
 import WhisperInsights from './components/WhisperInsights';
 import TechnicalDetails from './components/TechnicalDetails';
-import PrivacyOverlay from './components/PrivacyOverlay';
 
 const HowItWorks = () => {
   const [activeSection, setActiveSection] = useState('monitoring');
@@ -101,8 +100,6 @@ const HowItWorks = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-primary/5 via-background to-secondary/5">
-      {/* Privacy Overlay */}
-      <PrivacyOverlay isVisible={true} />
 
       {/* Offline Mode Indicator */}
       {isOfflineMode && (

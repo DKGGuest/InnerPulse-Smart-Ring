@@ -12,14 +12,18 @@ const ProductDetailsPreOrder = () => {
   const [selectedSize, setSelectedSize] = useState('M');
   const [quantity, setQuantity] = useState(1);
   const [isAddedToCart, setIsAddedToCart] = useState(false);
+  const [currency, setCurrency] = useState('INR');
+
+  const EXCHANGE_RATES = { INR: 1, AED: 0.044, USD: 0.012 };
+  const CURRENCY_SYMBOLS = { INR: '₹', AED: 'AED ', USD: '$' };
 
   const productData = {
     id: 'wellness-ring-pro',
     name: 'Smart Ring Pro',
     tagline: 'Your Personal Emotional Intelligence Companion',
-    price: 3499,
-    originalPrice: 7499,
-    discount: 25,
+    price: 3999,
+    originalPrice: 7999,
+    discount: Math.round((1 - 3999/7999) * 100),
     availability: 'Pre-order - Ships March 2025',
     rating: 4.8,
     reviewCount: 1240,
@@ -112,16 +116,29 @@ Built with medical-grade sensors and a titanium body, the WellnessRing Pro offer
               </div>
 
               {/* Pricing */}
-              <div className="flex items-center space-x-3 mb-6">
-                <span className="font-heading font-bold text-3xl text-text-primary">
-                  INR {productData.price}
-                </span>
-                <span className="text-lg text-text-tertiary line-through">
-                  INR {productData.originalPrice}
-                </span>
-                <span className="bg-success-light text-success-dark px-2 py-1 rounded-organic text-sm font-medium">
-                  Save INR {productData.originalPrice - productData.price}
-                </span>
+              <div className="flex flex-col mb-6">
+                <div className="flex items-center justify-between w-full mb-2">
+                  <div className="flex items-center space-x-3">
+                    <span className="font-heading font-bold text-3xl text-text-primary">
+                      {CURRENCY_SYMBOLS[currency]}{Math.round(productData.price * EXCHANGE_RATES[currency])}
+                    </span>
+                    <span className="text-lg text-text-tertiary line-through">
+                      {CURRENCY_SYMBOLS[currency]}{Math.round(productData.originalPrice * EXCHANGE_RATES[currency])}
+                    </span>
+                    <span className="bg-success-light text-success-dark px-2 py-1 rounded-organic text-sm font-medium">
+                      Save {CURRENCY_SYMBOLS[currency]}{Math.round((productData.originalPrice - productData.price) * EXCHANGE_RATES[currency])}
+                    </span>
+                  </div>
+                  <select 
+                    value={currency} 
+                    onChange={(e) => setCurrency(e.target.value)}
+                    className="p-2 pr-8 border border-border rounded-organic text-sm bg-surface text-text-primary focus:ring-primary focus:border-primary"
+                  >
+                    <option value="INR">INR (₹)</option>
+                    <option value="AED">AED</option>
+                    <option value="USD">USD ($)</option>
+                  </select>
+                </div>
               </div>
             </div>
 
@@ -143,7 +160,7 @@ Built with medical-grade sensors and a titanium body, the WellnessRing Pro offer
                   </button>
                 ))}
               </div>
-              <Link to="#sizing-guide" className="text-sm text-primary hover:text-primary-600 gentle-transition">
+              <Link to="/sizing-guide" className="text-sm text-primary hover:text-primary-600 gentle-transition">
                 Need help with sizing? View sizing guide
               </Link>
             </div>
@@ -155,6 +172,9 @@ Built with medical-grade sensors and a titanium body, the WellnessRing Pro offer
               onAddToCart={handleAddToCart}
               isAddedToCart={isAddedToCart}
               price={productData.price}
+              currency={currency}
+              exchangeRate={EXCHANGE_RATES[currency]}
+              currencySymbol={CURRENCY_SYMBOLS[currency]}
             />
 
             {/* Key Features */}
@@ -282,7 +302,7 @@ Built with medical-grade sensors and a titanium body, the WellnessRing Pro offer
       <div className="lg:hidden fixed bottom-0 left-0 right-0 bg-background border-t border-border-light p-4 z-50">
         <div className="flex items-center space-x-4">
           <div className="flex-1">
-            <div className="font-heading font-bold text-lg text-text-primary">${productData.price}</div>
+            <div className="font-heading font-bold text-lg text-text-primary">{CURRENCY_SYMBOLS[currency]}{Math.round(productData.price * EXCHANGE_RATES[currency])}</div>
             <div className="text-sm text-text-secondary">{productData.availability}</div>
           </div>
           <button

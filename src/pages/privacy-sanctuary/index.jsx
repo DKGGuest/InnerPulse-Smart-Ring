@@ -222,19 +222,19 @@ const PrivacySanctuary = () => {
       {/* Navigation Tabs */}
       <section className="sticky top-16 lg:top-20 z-30 bg-background/95 backdrop-blur-gentle border-b border-primary/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex overflow-x-auto py-4 space-x-2 lg:space-x-4">
+          <div className="flex justify-between items-stretch py-4 w-full gap-1 lg:gap-2">
             {navigationSections.map((section) => (
               <button
                 key={section.id}
                 onClick={() => handleSectionChange(section.id)}
-                className={`flex-shrink-0 flex items-center space-x-2 px-4 py-3 rounded-brand transition-whisper whisper-ripple ${activeSection === section.id
+                className={`flex-1 flex flex-col xl:flex-row items-center justify-center xl:justify-start space-y-1 xl:space-y-0 xl:space-x-2 p-2 lg:px-3 lg:py-2 rounded-brand transition-whisper whisper-ripple text-center xl:text-left ${activeSection === section.id
                     ? 'bg-primary/20 text-primary-700 shadow-gentle'
                     : 'text-text-secondary hover:text-text-primary hover:bg-surface'
                   }`}
               >
-                <Icon name={section.icon} size={18} />
-                <div className="text-left">
-                  <div className="font-medium text-sm">{section.name}</div>
+                <Icon name={section.icon} size={18} className="flex-shrink-0" />
+                <div className="xl:text-left">
+                  <div className="font-medium text-xs sm:text-sm">{section.name}</div>
                   <div className="text-xs opacity-80 hidden lg:block">{section.description}</div>
                 </div>
               </button>
