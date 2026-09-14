@@ -14,12 +14,12 @@ const Footer = () => {
     ],
     support: [
       { label: 'Help Center', href: '/help-center' },
-      { label: 'Contact Us', href: '#' },
+      { label: 'Contact Us', href: '/contact-us' },
       { label: 'Shipping Info', href: '#' },
       { label: 'Returns', href: '#' }
     ],
     company: [
-      { label: 'About Us', href: '#' },
+      { label: 'About Us', href: '/about-us' },
       { label: 'Blog', href: '/research-hub' },
       { label: 'Careers', href: '#' },
       { label: 'Press', href: '#' }
@@ -117,12 +117,12 @@ const Footer = () => {
             <ul className="space-y-3">
               {footerLinks.company.map((link, index) => (
                 <li key={index}>
-                  <a
-                    href={link.href}
+                  <Link
+                    to={link.href}
                     className="font-body text-gray-300 hover:text-white gentle-transition text-sm"
                   >
                     {link.label}
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>

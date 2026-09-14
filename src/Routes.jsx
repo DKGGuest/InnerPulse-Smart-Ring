@@ -24,6 +24,8 @@ import OrderNow from "pages/Order-now/OrderNow";
 import PrivacyPolicy from "pages/privacy-policy";
 import SizingGuide from "pages/sizing-guide";
 import HelpCenter from "pages/help-center";
+import ContactUs from "pages/contact-us";
+import AboutUs from "pages/about-us";
 
 
 const Routes = () => {
@@ -51,6 +53,8 @@ const Routes = () => {
           <Route path="/privacy-policy" element={<PrivacyPolicy />} />
           <Route path="/sizing-guide" element={<SizingGuide />} />
           <Route path="/help-center" element={<HelpCenter />} />
+          <Route path="/contact-us" element={<ContactUs />} />
+          <Route path="/about-us" element={<AboutUs />} />
         </RouterRoutes>
       </ErrorBoundary>
     </BrowserRouter>
