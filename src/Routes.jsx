@@ -26,6 +26,7 @@ import SizingGuide from "pages/sizing-guide";
 import HelpCenter from "pages/help-center";
 import ContactUs from "pages/contact-us";
 import AboutUs from "pages/about-us";
+import TermsOfService from "pages/terms-of-service";
 
 
 const Routes = () => {
@@ -55,6 +56,7 @@ const Routes = () => {
           <Route path="/help-center" element={<HelpCenter />} />
           <Route path="/contact-us" element={<ContactUs />} />
           <Route path="/about-us" element={<AboutUs />} />
+          <Route path="/terms-of-service" element={<TermsOfService />} />
         </RouterRoutes>
       </ErrorBoundary>
     </BrowserRouter>
