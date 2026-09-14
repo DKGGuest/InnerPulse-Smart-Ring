@@ -56,9 +56,12 @@ const TermsOfService = () => {
             <div className="bg-gradient-to-br from-primary-900 to-secondary-900 pt-32 pb-16 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
                 <div className="absolute inset-0 bg-[url('/assets/images/noise.png')] opacity-20 mix-blend-overlay"></div>
                 <div className="max-w-7xl mx-auto relative z-10 text-center">
-                    <h1 className="text-4xl lg:text-5xl font-heading font-bold text-white">
+                    <h1 className="text-4xl lg:text-5xl font-heading font-bold text-white mb-4">
                         Terms of Service
                     </h1>
+                    <p className="text-primary-100 text-lg max-w-2xl mx-auto font-body">
+                        Please read these terms carefully before using our platform.
+                    </p>
                 </div>
             </div>
 
