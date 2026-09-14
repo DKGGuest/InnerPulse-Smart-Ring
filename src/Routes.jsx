@@ -23,6 +23,7 @@ import RegistrationForm from "pages/Registeration/RegistrationForm";
 import OrderNow from "pages/Order-now/OrderNow";
 import PrivacyPolicy from "pages/privacy-policy";
 import SizingGuide from "pages/sizing-guide";
+import HelpCenter from "pages/help-center";
 
 
 const Routes = () => {
@@ -49,6 +50,7 @@ const Routes = () => {
           <Route path="/research-hub" element={<ResearchHub />} />
           <Route path="/privacy-policy" element={<PrivacyPolicy />} />
           <Route path="/sizing-guide" element={<SizingGuide />} />
+          <Route path="/help-center" element={<HelpCenter />} />
         </RouterRoutes>
       </ErrorBoundary>
     </BrowserRouter>

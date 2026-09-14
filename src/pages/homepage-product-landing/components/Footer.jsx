@@ -13,7 +13,7 @@ const Footer = () => {
       { label: 'Pre-Order', href: '/product-details-pre-order' }
     ],
     support: [
-      { label: 'Help Center', href: '#' },
+      { label: 'Help Center', href: '/help-center' },
       { label: 'Contact Us', href: '#' },
       { label: 'Shipping Info', href: '#' },
       { label: 'Returns', href: '#' }
@@ -100,12 +100,12 @@ const Footer = () => {
             <ul className="space-y-3">
               {footerLinks.support.map((link, index) => (
                 <li key={index}>
-                  <a
-                    href={link.href}
+                  <Link
+                    to={link.href}
                     className="font-body text-gray-300 hover:text-white gentle-transition text-sm"
                   >
                     {link.label}
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>
