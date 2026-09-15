@@ -110,13 +110,13 @@ const HelpCenter = () => {
       </section>
 
       {/* FAQs Section */}
-      <section id="faq-section" className="py-16 px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto">
+      <section id="faq-section" className="py-16 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto">
         <div className="text-center mb-10">
           <h2 className="text-3xl font-heading font-bold text-text-primary mb-4">Frequently Asked Questions</h2>
           <div className="flex flex-wrap justify-center gap-2 mt-6">
             <button
               onClick={() => setActiveFaqCategory('all')}
-              className={`px-4 py-2 rounded-full text-sm font-medium gentle-transition ${
+              className={`whitespace-nowrap flex-shrink-0 px-4 py-2 rounded-full text-sm font-medium gentle-transition ${
                 activeFaqCategory === 'all' 
                 ? 'bg-primary text-white' 
                 : 'bg-surface border border-border text-text-secondary hover:bg-primary-50 hover:text-primary'
@@ -128,7 +128,7 @@ const HelpCenter = () => {
               <button
                 key={cat.id}
                 onClick={() => setActiveFaqCategory(cat.id)}
-                className={`px-4 py-2 rounded-full text-sm font-medium gentle-transition ${
+                className={`whitespace-nowrap flex-shrink-0 px-4 py-2 rounded-full text-sm font-medium gentle-transition ${
                   activeFaqCategory === cat.id 
                   ? 'bg-primary text-white' 
                   : 'bg-surface border border-border text-text-secondary hover:bg-primary-50 hover:text-primary'

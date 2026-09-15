@@ -366,26 +366,19 @@ const PrivacySanctuary = () => {
               </p>
 
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link
-                  to="/homepage-ai-wellness-platform"
-                  className="inline-flex items-center space-x-2 px-6 py-3 bg-plum text-white font-heading font-medium rounded-brand transition-whisper whisper-ripple hover:shadow-whisper hover:scale-105"
-                >
-                  <Icon name="ArrowLeft" size={20} />
-                  <span>Back to Home</span>
-                </Link>
 
                 <a
                   href="mailto:mdoffice@dkgrouplabs.com"
-                  className="flex items-center justify-center space-x-2 px-6 py-3 border border-primary text-primary rounded-organic font-body font-medium gentle-transition haptic-feedback hover:bg-primary-100"
+                  className="flex items-center justify-center space-x-2 px-6 py-3 border border-primary text-primary rounded-organic font-body font-medium gentle-transition haptic-feedback hover:bg-primary-50"
                 >
                   <Icon name="Mail" size={18} />
                   <span>Email Us</span>
                 </a>
                 <Link
                   to="/privacy-policy"
-                  className="inline-flex items-center space-x-2 px-6 py-3 bg-primary text-white font-heading font-medium rounded-brand transition-whisper whisper-ripple hover:shadow-whisper hover:scale-105"
+                  className="flex items-center justify-center space-x-2 px-6 py-3 bg-primary text-text-inverse rounded-organic font-body font-medium gentle-transition haptic-feedback hover:bg-primary-600"
                 >
-                  <Icon name="FileText" size={20} />
+                  <Icon name="FileText" size={18} />
                   <span>View Full Legal Policy</span>
                 </Link>
               </div>

@@ -270,17 +270,14 @@ const HowItWorks = () => {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-              <button className="px-8 py-4 bg-plum text-white font-heading font-semibold rounded-brand transition-whisper whisper-ripple hover:shadow-whisper hover:scale-105 breathing">
-                Join the Whisper Community
-              </button>
 
               <a
-        href="mailto:mdoffice@dkgrouplabs.com"
-        className="flex items-center justify-center space-x-2 px-6 py-3 border border-primary text-primary rounded-organic font-body font-medium gentle-transition haptic-feedback hover:bg-primary-100"
-      >
-        <Icon name="Mail" size={18} />
-        <span>Email Us</span>
-      </a>
+                href="mailto:mdoffice@dkgrouplabs.com"
+                className="flex items-center justify-center space-x-2 px-6 py-3 border border-primary text-primary rounded-organic font-body font-medium gentle-transition haptic-feedback hover:bg-primary-50"
+              >
+                <Icon name="Mail" size={18} />
+                <span>Email Us</span>
+              </a>
 
   
               
