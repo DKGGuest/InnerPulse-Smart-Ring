@@ -24,7 +24,7 @@ const ProductDetailsPreOrder = () => {
     price: 3999,
     originalPrice: 7999,
     discount: Math.round((1 - 3999/7999) * 100),
-    availability: 'Pre-order - Ships March 2025',
+    availability: 'Pre-order - Ships March 2026',
     rating: 4.8,
     reviewCount: 1240,
     description: `The WellnessRing Pro is a revolutionary wearable device that combines cutting-edge biometric sensors with advanced AI to provide real-time emotional intelligence insights. Designed for the modern wellness enthusiast, this sleek ring monitors your physiological responses and translates them into actionable emotional awareness data.
@@ -91,7 +91,6 @@ Built with medical-grade sensors and a titanium body, the WellnessRing Pro offer
                 <span className="bg-accent text-text-inverse px-2 py-1 rounded-organic text-xs font-medium">
                   {productData.discount}% OFF
                 </span>
-                <span className="text-success text-sm font-medium">{productData.availability}</span>
               </div>
               <h1 className="font-heading font-bold text-3xl lg:text-4xl text-text-primary mb-2">
                 {productData.name}

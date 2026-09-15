@@ -220,7 +220,7 @@ const PreOrderSection = ({ quantity, setQuantity, onAddToCart, isAddedToCart, pr
     {
       id: 'deposit',
       label: 'Pre-order Deposit',
-      description: `Pay ${currencySymbol}${Math.round(1000 * exchangeRate)} now, rest on shipping`,
+      description: `Pay ${currencySymbol}${Math.round(1000 * exchangeRate * quantity)} now, rest on shipping`,
       amount: 1000,
       savings: 10
     }
@@ -242,7 +242,7 @@ const PreOrderSection = ({ quantity, setQuantity, onAddToCart, isAddedToCart, pr
       state: {
         name: 'InnerPulse Smart Ring',
         image: '/assets/images/ProductShowcaseRing.png',
-        price: selectedPayment === 'deposit' ? Math.round(1000 * exchangeRate) : Math.round((selectedOption.amount * quantity - selectedOption.savings * quantity) * exchangeRate),
+        price: selectedPayment === 'deposit' ? Math.round(1000 * exchangeRate * quantity) : Math.round((selectedOption.amount * quantity - selectedOption.savings * quantity) * exchangeRate),
         quantity,
         selectedPayment,
         currencySymbol
@@ -284,7 +284,7 @@ const PreOrderSection = ({ quantity, setQuantity, onAddToCart, isAddedToCart, pr
                   <div className="text-sm">{option.description}</div>
                 </div>
               </div>
-              <div className="font-bold">{currencySymbol}{Math.round(option.amount * exchangeRate)}</div>
+              <div className="font-bold">{currencySymbol}{Math.round(option.amount * quantity * exchangeRate)}</div>
             </label>
           ))}
         </div>
