@@ -1,8 +1,6 @@
 import React, { useState, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import Icon from 'components/AppIcon';
-import emailjs from '@emailjs/browser';
-
 const ContactUs = () => {
   const form = useRef();
   const [formData, setFormData] = useState({
@@ -53,16 +51,8 @@ const ContactUs = () => {
     setErrorMessage('');
 
     try {
-      const serviceId = import.meta.env.VITE_EMAILJS_SERVICE_ID;
-      const templateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
-      const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
-
-      await emailjs.sendForm(
-        serviceId,
-        templateId,
-        form.current,
-        publicKey
-      );
+      // Simulate API call delay
+      await new Promise(resolve => setTimeout(resolve, 1500));
 
       setIsSubmitted(true);
       setFormData({ name: '', email: '', subject: '', message: '' });

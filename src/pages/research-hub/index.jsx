@@ -433,13 +433,13 @@ const insights = await whisperRing.analyze({
                 </div>
                 
                 <div className="flex space-x-4">
-                  <button className="px-4 py-2 bg-plum text-white rounded-brand-sm transition-gentle hover:shadow-gentle">
-                    <Icon name="Code" size={16} className="inline mr-1" />
-                    Full Documentation
+                  <button className="flex items-center justify-center space-x-2 px-4 py-2 bg-primary text-text-inverse rounded-organic font-body font-medium gentle-transition haptic-feedback hover:bg-primary-600">
+                    <Icon name="Code" size={16} />
+                    <span>Full Documentation</span>
                   </button>
-                  <button className="px-4 py-2 border border-primary text-primary-700 rounded-brand-sm transition-gentle hover:bg-primary/10">
-                    <Icon name="Key" size={16} className="inline mr-1" />
-                    Request API Key
+                  <button className="flex items-center justify-center space-x-2 px-4 py-2 border border-primary text-primary rounded-organic font-body font-medium gentle-transition haptic-feedback hover:bg-primary-50">
+                    <Icon name="Key" size={16} />
+                    <span>Request API Key</span>
                   </button>
                 </div>
               </div>
@@ -635,13 +635,13 @@ const insights = await whisperRing.analyze({
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
-              to="/community-stories-cultural-journeys"
-              className="px-8 py-4 bg-plum text-white font-heading font-medium rounded-brand transition-whisper whisper-ripple hover:shadow-whisper hover:scale-105"
+            <button
+              disabled
+              className="flex items-center justify-center space-x-2 px-6 py-3 bg-primary text-text-inverse rounded-organic font-body font-medium opacity-50 cursor-not-allowed"
             >
-              <Icon name="Users" size={20} className="inline mr-2" />
-              Join Community
-            </Link>
+              <Icon name="Users" size={18} />
+              <span>Join Community</span>
+            </button>
             <a
         href="mailto:mdoffice@dkgrouplabs.com"
         className="flex items-center justify-center space-x-2 px-6 py-3 border border-primary text-primary rounded-organic font-body font-medium gentle-transition haptic-feedback hover:bg-primary-100"

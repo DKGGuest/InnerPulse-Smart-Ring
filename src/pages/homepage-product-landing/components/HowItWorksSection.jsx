@@ -43,15 +43,13 @@ const HowItWorksSection = () => {
         </div>
 
         {/* Steps Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-6">
-          {steps.map((step, index) => (
-            <div key={step.id} className="relative">
-              {/* Connection Line */}
-              {index < steps.length - 1 && (
-                <div className="hidden lg:block absolute top-16 left-full w-full h-0.5 bg-gradient-to-r from-primary to-transparent transform translate-x-4 z-0"></div>
-              )}
-              
-              <div className="relative z-10 text-center group">
+        <div className="relative">
+          {/* Continuous Connection Line */}
+          <div className="hidden lg:block absolute top-16 left-4 right-4 h-0.5 bg-primary/20 z-0"></div>
+          
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-6 relative z-10">
+            {steps.map((step, index) => (
+              <div key={step.id} className="relative text-center group">
                 {/* Step Number */}
                 <div className="inline-flex items-center justify-center w-12 h-12 bg-primary text-text-inverse rounded-full font-heading font-bold text-lg mb-6 group-hover:scale-110 gentle-transition">
                   {step.id}
@@ -70,8 +68,8 @@ const HowItWorksSection = () => {
                   {step.description}
                 </p>
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
 
         {/* CTA Section */}

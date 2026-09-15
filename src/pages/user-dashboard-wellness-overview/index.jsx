@@ -213,22 +213,6 @@ const UserDashboardWellnessOverview = () => {
               ))}
             </div>
 
-            {/* Achievement Badges - Mobile */}
-            <div className="lg:hidden">
-              <AchievementBadges />
-            </div>
-          </div>
-
-          {/* Right Column - Sidebar */}
-          <div className="lg:col-span-4 space-y-6">
-            {/* Ring Status - Desktop */}
-            <div className="hidden lg:block">
-              <RingStatusCard />
-            </div>
-
-            {/* Personalized Insights */}
-            <PersonalizedInsights />
-
             {/* Recent Activity */}
             <div className="bg-background border border-border-light rounded-organic-lg p-6 soft-elevation-1">
               <div className="flex items-center justify-between mb-6">
@@ -274,10 +258,23 @@ const UserDashboardWellnessOverview = () => {
               </div>
             </div>
 
-            {/* Achievement Badges - Desktop */}
-            <div className="hidden lg:block">
+            {/* Achievement Badges */}
+            <div>
               <AchievementBadges />
             </div>
+          </div>
+
+          {/* Right Column - Sidebar */}
+          <div className="lg:col-span-4 space-y-6">
+            {/* Ring Status - Desktop */}
+            <div className="hidden lg:block">
+              <RingStatusCard />
+            </div>
+
+            {/* Personalized Insights */}
+            <PersonalizedInsights />
+
+
 
             {/* Quick Stats */}
             <div className="bg-background border border-border-light rounded-organic-lg p-6 soft-elevation-1">
