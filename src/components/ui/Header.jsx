@@ -7,7 +7,15 @@ const Header = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isCartOpen, setIsCartOpen] = useState(false);
   const [isAuthModalOpen, setIsAuthModalOpen] = useState(false);
-  const [cartItemCount] = useState(2);
+  const [cartItems, setCartItems] = useState([
+    {
+      id: 1,
+      name: 'SmartRing',
+      quantity: 1,
+      price: 3499
+    }
+  ]);
+  const cartItemCount = cartItems.length;
   const location = useLocation();
   const navigate = useNavigate();
   
@@ -208,26 +216,44 @@ const Header = () => {
               
               <div className="flex-1 p-6">
                 <div className="space-y-4">
-                  <div className="flex items-center space-x-4 p-4 bg-surface rounded-organic">
-                    <div className="w-16 h-16 bg-primary-100 rounded-organic flex items-center justify-center">
-                      <Icon name="Package" size={24} color="#4A90A4" />
+                  {cartItems.length > 0 ? (
+                    cartItems.map(item => (
+                      <div key={item.id} className="flex items-center space-x-4 p-4 bg-surface rounded-organic relative group">
+                        <div className="w-16 h-16 bg-primary-100 rounded-organic flex items-center justify-center">
+                          <Icon name="Package" size={24} color="#4A90A4" />
+                        </div>
+                        <div className="flex-1">
+                          <h3 className="font-body font-medium text-text-primary">{item.name}</h3>
+                          <p className="text-sm text-text-secondary">Quantity: {item.quantity}</p>
+                          <p className="font-semibold text-accent">INR {item.price}</p>
+                        </div>
+                        <button 
+                          onClick={() => setCartItems(cartItems.filter(i => i.id !== item.id))}
+                          className="absolute top-2 right-2 p-1.5 text-text-secondary hover:text-red-500 gentle-transition opacity-0 group-hover:opacity-100"
+                          title="Remove item"
+                        >
+                          <Icon name="Trash2" size={16} />
+                        </button>
+                      </div>
+                    ))
+                  ) : (
+                    <div className="text-center text-text-secondary py-8">
+                      Your wishlist is empty
                     </div>
-                    <div className="flex-1">
-                      <h3 className="font-body font-medium text-text-primary">SmartRing </h3>
-                      <p className="text-sm text-text-secondary">Quantity: 1</p>
-                      <p className="font-semibold text-accent">INR 3499</p>
-                    </div>
-                  </div>
+                  )}
                 </div>
               </div>
 
               <div className="p-6 border-t border-border-light">
                 <div className="flex items-center justify-between mb-4">
                   <span className="font-body font-medium text-text-primary">Total:</span>
-                  <span className="font-heading font-semibold text-xl text-text-primary">INR 3499</span>
+                  <span className="font-heading font-semibold text-xl text-text-primary">
+                    INR {cartItems.reduce((acc, item) => acc + item.price * item.quantity, 0)}
+                  </span>
                 </div>
                 <button
-                  className="w-full bg-primary text-text-inverse py-3 rounded-organic font-body font-medium gentle-transition haptic-feedback hover:bg-primary-600"
+                  disabled={cartItems.length === 0}
+                  className="w-full bg-primary text-text-inverse py-3 rounded-organic font-body font-medium gentle-transition haptic-feedback hover:bg-primary-600 disabled:opacity-50 disabled:cursor-not-allowed"
                   onClick={() => {
                     closeMobileMenu && closeMobileMenu();
                     setIsCartOpen(false); // Close wishlist/cart overlay

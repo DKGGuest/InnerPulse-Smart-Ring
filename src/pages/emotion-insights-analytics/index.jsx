@@ -285,7 +285,7 @@ const EmotionInsightsAnalytics = () => {
               <select
                 value={selectedTimeRange}
                 onChange={(e) => setSelectedTimeRange(e.target.value)}
-                className="px-3 py-2 border border-border rounded-organic focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent gentle-transition"
+                className="pl-3 pr-8 py-2 border border-border rounded-organic focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent gentle-transition"
               >
                 {timeRangeOptions.map(option => (
                   <option key={option.value} value={option.value}>{option.label}</option>
@@ -297,7 +297,7 @@ const EmotionInsightsAnalytics = () => {
               <select
                 value={selectedMetric}
                 onChange={(e) => setSelectedMetric(e.target.value)}
-                className="px-3 py-2 border border-border rounded-organic focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent gentle-transition"
+                className="pl-3 pr-8 py-2 border border-border rounded-organic focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent gentle-transition"
               >
                 {metricOptions.map(option => (
                   <option key={option.value} value={option.value}>{option.label}</option>
