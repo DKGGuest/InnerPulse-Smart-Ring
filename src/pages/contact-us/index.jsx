@@ -51,12 +51,34 @@ const ContactUs = () => {
     setErrorMessage('');
 
     try {
-      // Simulate API call delay
-      await new Promise(resolve => setTimeout(resolve, 1500));
+      const accessKey = import.meta.env.VITE_WEB3FORMS_ACCESS_KEY;
+      
+      const data = {
+        access_key: accessKey,
+        name: formData.name,
+        email: formData.email,
+        subject: formData.subject,
+        message: formData.message,
+      };
 
-      setIsSubmitted(true);
-      setFormData({ name: '', email: '', subject: '', message: '' });
-      setTimeout(() => setIsSubmitted(false), 5000);
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify(data),
+      });
+
+      const result = await response.json();
+
+      if (result.success) {
+        setIsSubmitted(true);
+        setFormData({ name: '', email: '', subject: '', message: '' });
+        setTimeout(() => setIsSubmitted(false), 5000);
+      } else {
+        throw new Error(result.message || "Failed to send message");
+      }
     } catch (error) {
       console.error('Failed to send email:', error);
       setErrorMessage('Oops! Something went wrong. Please try again later.');
