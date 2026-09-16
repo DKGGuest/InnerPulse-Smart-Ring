@@ -7,10 +7,10 @@ const Footer = () => {
 
   const footerLinks = {
     product: [
-      { label: 'Features', href: '/product-details-pre-order' },
-      { label: 'Specifications', href: '/product-details-pre-order' },
-      { label: 'Pricing', href: '/product-details-pre-order' },
-      { label: 'Pre-Order', href: '/product-details-pre-order' }
+      { label: 'Features', href: '/product-details-pre-order#features' },
+      { label: 'Specifications', href: '/product-details-pre-order#specifications' },
+      { label: 'Pricing', href: '/product-details-pre-order#pricing' },
+      { label: 'Pre-Order', href: '/product-details-pre-order#pre-order' }
     ],
     support: [
       { label: 'Help Center', href: '/help-center' },
@@ -57,7 +57,7 @@ const Footer = () => {
                 <Icon name="Heart" size={24} color="white" />
               </div>
               <span className="font-heading font-semibold text-xl">
-                SmartRing
+                InnerPulse
               </span>
             </Link>
 
@@ -175,7 +175,7 @@ const Footer = () => {
           <div className="flex flex-col lg:flex-row justify-between items-center space-y-4 lg:space-y-0">
             {/* Copyright */}
             <div className="font-body text-gray-300 text-sm">
-              © {currentYear} SmartRing. All rights reserved.
+              © {currentYear} InnerPulse. All rights reserved.
             </div>
 
             {/* Social Links */}

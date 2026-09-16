@@ -27,19 +27,20 @@ const RegistrationForm = () => {
         "https://script.google.com/macros/s/AKfycbxNQgor9Lnr61PiZw0cIJ0x3Kh_9wGx-5uKaWkAnjPUG3Wa6HuA4sLRq995UzC-gaH4mw/exec",
         {
           method: "POST",
-          body: form
+          body: form,
+          mode: "no-cors"
         }
       );
 
-      // Show the actual response for debugging
-      const resultText = await response.text();
-      console.log('Registration response:', resultText);
-      if (response.ok && resultText.toLowerCase().includes("success")) {
-        setStatus("Submitted successfully!");
-        setFormData({ name: "", email: "", phone: "" });
-      } else {
-        setStatus(`Submission failed. Server response: ${resultText}`);
-      }
+      // With mode: "no-cors", the response is opaque and we cannot read its text or status.
+      // If it didn't throw an error, we assume it was submitted successfully.
+      setStatus("Submitted successfully!");
+      setFormData({ name: "", email: "", phone: "" });
+      
+      // Clear the success message after 3 seconds
+      setTimeout(() => {
+        setStatus("");
+      }, 3000);
     } catch (error) {
       console.error("Error!", error.message);
       setStatus("Something went wrong: " + error.message);

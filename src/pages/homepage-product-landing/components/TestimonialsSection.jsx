@@ -13,7 +13,7 @@ const TestimonialsSection = () => {
       location: "San Francisco, CA",
       avatar: "https://randomuser.me/api/portraits/women/44.jpg",
       rating: 5,
-      quote: `WellnessRing has revolutionized how I understand my patients' emotional patterns. The data insights are incredibly accurate and have helped me provide more personalized treatment plans. It's like having a 24/7 emotional health monitor that actually works.`,
+      quote: `Smart Ring has revolutionized how I understand my patients' emotional patterns. The data insights are incredibly accurate and have helped me provide more personalized treatment plans. It's like having a 24/7 emotional health monitor that actually works.`,
       highlight: "Helped 200+ patients improve emotional awareness"
     },
     {
@@ -23,7 +23,7 @@ const TestimonialsSection = () => {
       location: "Austin, TX",
       avatar: "https://randomuser.me/api/portraits/men/32.jpg",
       rating: 5,
-      quote: `As someone who struggles with work-life balance, WellnessRing has been a game-changer. It alerts me when my stress levels spike and suggests breathing exercises. I've reduced my anxiety by 60% in just 3 months of use.`,
+      quote: `As someone who struggles with work-life balance, Smart Ring has been a game-changer. It alerts me when my stress levels spike and suggests breathing exercises. I've reduced my anxiety by 60% in just 3 months of use.`,
       highlight: "60% reduction in anxiety levels"
     },
     {
@@ -33,7 +33,7 @@ const TestimonialsSection = () => {
       location: "Miami, FL",
       avatar: "https://randomuser.me/api/portraits/women/28.jpg",
       rating: 5,
-      quote: `I recommend WellnessRing to all my students. It perfectly complements mindfulness practices and provides objective data about emotional states. The cultural sensitivity in its insights makes it suitable for my diverse clientele.`,
+      quote: `I recommend Smart Ring to all my students. It perfectly complements mindfulness practices and provides objective data about emotional states. The cultural sensitivity in its insights makes it suitable for my diverse clientele.`,
       highlight: "Recommended to 500+ yoga students"
     },
     {
@@ -43,7 +43,7 @@ const TestimonialsSection = () => {
       location: "Seattle, WA",
       avatar: "https://randomuser.me/api/portraits/men/45.jpg",
       rating: 5,
-      quote: `The emotional intelligence insights from WellnessRing have enhanced my coaching sessions tremendously. My clients can now track their progress objectively, leading to better outcomes and increased self-awareness.`,
+      quote: `The emotional intelligence insights from Smart Ring have enhanced my coaching sessions tremendously. My clients can now track their progress objectively, leading to better outcomes and increased self-awareness.`,
       highlight: "Improved coaching outcomes by 40%"
     }
   ];
@@ -72,7 +72,7 @@ const TestimonialsSection = () => {
   //           Trusted by Wellness Professionals
   //         </h2>
   //         <p className="font-body text-lg text-text-secondary max-w-3xl mx-auto">
-  //           Join thousands of users who have transformed their emotional intelligence and overall well-being with WellnessRing.
+  //           Join thousands of users who have transformed their emotional intelligence and overall well-being with Smart Ring.
   //         </p>
   //       </div>
 

@@ -1,8 +1,20 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
 import Icon from 'components/AppIcon';
 
 const ProductSpecs = ({ specifications, features }) => {
   const [activeTab, setActiveTab] = useState('specs');
+  const location = useLocation();
+
+  useEffect(() => {
+    if (location.hash === '#features') {
+      setActiveTab('features');
+    } else if (location.hash === '#specifications') {
+      setActiveTab('specs');
+    } else if (location.hash === '#compatibility') {
+      setActiveTab('compatibility');
+    }
+  }, [location.hash]);
 
   const tabs = [
     { id: 'specs', label: 'Specifications', icon: 'Settings' },
@@ -35,7 +47,8 @@ const ProductSpecs = ({ specifications, features }) => {
   ];
 
   return (
-    <section id="specifications">
+    <section id="specifications" className="relative scroll-mt-24">
+      <div id="features" className="absolute -top-24"></div>
       <h2 className="font-heading font-bold text-2xl lg:text-3xl text-text-primary mb-6">
         Technical Details
       </h2>

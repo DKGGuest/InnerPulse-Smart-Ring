@@ -32,7 +32,7 @@ const HeroSection = () => {
             </h1>
             
             <p className="font-body text-lg lg:text-xl text-text-secondary mb-8 max-w-2xl mx-auto lg:mx-0">
-              Discover the power of emotional awareness with WellnessRing - the smart ring that tracks your emotional patterns, provides personalized insights, and guides you toward better mental wellness.
+              Discover the power of emotional awareness with Smart Ring - the smart ring that tracks your emotional patterns, provides personalized insights, and guides you toward better mental wellness.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start mb-8">

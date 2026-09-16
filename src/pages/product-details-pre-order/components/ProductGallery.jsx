@@ -10,14 +10,14 @@ const ProductGallery = () => {
     {
       id: 1,
       url: 'https://i5.walmartimages.com/seo/Smart-Ring-Fitness-Ring-Smart-Rings-for-Men-Women-IP68-Tracking-Ring-with-Pedometer-Calories-Sleep-Smart-Ring-Android-IOS-Warehouse-Clearance_1be6cea6-0938-4648-b546-ea9ee9070a00.109137bf67b4e68c0fc33a558a1892d5.jpeg?odnHeight=768&odnWidth=768&odnBg=FFFFFF=crop',
-      alt: 'SmartRing Pro - video',
+      alt: 'InnerPulse Pro - video',
       type: 'main',
       videoUrl: './assets/videos/ringvideo.mp4' // <-- Add your video URL here
     },
     {
       id: 2,
       url: 'https://i5.walmartimages.com/seo/Smart-Ring-Fitness-Ring-Smart-Rings-for-Men-Women-IP68-Tracking-Ring-with-Pedometer-Calories-Sleep-Smart-Ring-Android-IOS-Warehouse-Clearance_1be6cea6-0938-4648-b546-ea9ee9070a00.109137bf67b4e68c0fc33a558a1892d5.jpeg?odnHeight=768&odnWidth=768&odnBg=FFFFFF=crop',
-      alt: 'WellnessRing Pro - Front View',
+      alt: 'Smart Ring Pro - Front View',
       type: 'main'
     },
     {
@@ -29,19 +29,19 @@ const ProductGallery = () => {
     {
       id: 4,
       url: 'https://www.colmi.info/cdn/shop/files/COLMI_R09_Smart_ring_Advanced_Multi-Sensor_Technology_1.jpg?v=1732861875&width=1500',
-      alt: 'WellnessRing Pro - Charging Dock',
+      alt: 'Smart Ring Pro - Charging Dock',
       type: 'accessory'
     },
     {
       id: 5,
       url: './assets/images/Overviewimage.png',
-      alt: 'WellnessRing Pro - App Interface',
+      alt: 'Smart Ring Pro - App Interface',
       type: 'app'
     },
     {
       id: 6,
       url: './assets/images/Ringapp.png',
-      alt: 'WellnessRing Pro - Lifestyle Shot',
+      alt: 'Smart Ring Pro - Lifestyle Shot',
       type: 'lifestyle'
     }
   ];

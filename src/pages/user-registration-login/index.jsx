@@ -153,7 +153,7 @@ const UserRegistrationLogin = () => {
                 <Icon name="Heart" size={32} color="white" />
               </div>
               <h1 className="font-heading font-bold text-3xl lg:text-4xl text-text-primary mb-2">
-                {isLogin ? 'Welcome Back' : 'Join WellnessRing'}
+                {isLogin ? 'Welcome Back' : 'Join Smart Ring'}
               </h1>
               <p className="font-body text-text-secondary">
                 {isLogin 

@@ -9,15 +9,15 @@ const ProductShowcaseSection = () => {
   const productImages = [
     {
       src: "https://images.unsplash.com/photo-1544117519-31a4b719223d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-      alt: "WellnessRing Front View"
+      alt: "Smart Ring Front View"
     },
     {
       src: "https://images.unsplash.com/photo-1434494878577-86c23bcb06b9?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-      alt: "WellnessRing Side View"
+      alt: "Smart Ring Side View"
     },
     {
       src: "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-      alt: "WellnessRing App Interface"
+      alt: "Smart Ring App Interface"
     }
   ];
 
@@ -69,10 +69,10 @@ const ProductShowcaseSection = () => {
   //       {/* Header */}
   //       <div className="text-center mb-16">
   //         <h2 className="font-heading font-bold text-3xl lg:text-4xl text-text-primary mb-6">
-  //           Meet WellnessRing Pro
+  //           Meet Smart Ring Pro
   //         </h2>
   //         <p className="font-body text-lg text-text-secondary max-w-3xl mx-auto">
-  //           Engineered with precision and designed for comfort, WellnessRing Pro combines cutting-edge technology with elegant aesthetics to deliver unparalleled wellness insights.
+  //           Engineered with precision and designed for comfort, Smart Ring Pro combines cutting-edge technology with elegant aesthetics to deliver unparalleled wellness insights.
   //         </p>
   //       </div>
 

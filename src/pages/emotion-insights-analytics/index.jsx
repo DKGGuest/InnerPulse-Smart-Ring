@@ -332,7 +332,7 @@ const EmotionInsightsAnalytics = () => {
             </h2>
             <div className="flex items-center space-x-2 text-text-secondary">
               <Icon name="Info" size={16} />
-              <span className="font-body text-sm">Real-time sync with your WellnessRing</span>
+              <span className="font-body text-sm">Real-time sync with your Smart Ring</span>
             </div>
           </div>
           {renderChart()}

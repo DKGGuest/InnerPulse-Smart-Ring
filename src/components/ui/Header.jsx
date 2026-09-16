@@ -10,7 +10,7 @@ const Header = () => {
   const [cartItems, setCartItems] = useState([
     {
       id: 1,
-      name: 'SmartRing',
+      name: 'InnerPulse',
       quantity: 1,
       price: 3499
     }
@@ -65,7 +65,7 @@ const Header = () => {
                 <Icon name="Circle" size={20} color="white" className="lg:w-6 lg:h-6" />
               </div>
               <span className="font-heading font-semibold text-lg lg:text-xl text-text-primary">
-                SmartRing
+                InnerPulse
               </span>
             </Link>
 
@@ -151,7 +151,7 @@ const Header = () => {
                     <Icon name="Heart" size={20} color="white" />
                   </div>
                   <span className="font-heading font-semibold text-lg text-text-primary">
-                    WellnessRing
+                    Smart Ring
                   </span>
                 </Link>
                 <button

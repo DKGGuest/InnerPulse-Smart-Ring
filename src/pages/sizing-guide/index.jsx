@@ -16,7 +16,7 @@ const SizingGuide = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
         <nav className="flex items-center space-x-2 text-sm">
           <Link to="/product-details-pre-order" className="text-text-secondary hover:text-primary gentle-transition">
-            WellnessRing Pro
+            Smart Ring Pro
           </Link>
           <Icon name="ChevronRight" size={16} className="text-text-tertiary" />
           <span className="text-text-primary font-medium">Sizing Guide</span>

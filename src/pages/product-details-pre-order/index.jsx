@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import Icon from 'components/AppIcon';
 import Image from 'components/AppImage';
 import ProductGallery from './components/ProductGallery';
@@ -13,6 +13,19 @@ const ProductDetailsPreOrder = () => {
   const [quantity, setQuantity] = useState(1);
   const [isAddedToCart, setIsAddedToCart] = useState(false);
   const [currency, setCurrency] = useState('INR');
+  const location = useLocation();
+
+  useEffect(() => {
+    if (location.hash) {
+      const id = location.hash.replace('#', '');
+      const element = document.getElementById(id);
+      if (element) {
+        setTimeout(() => {
+          element.scrollIntoView({ behavior: 'smooth' });
+        }, 100);
+      }
+    }
+  }, [location.hash]);
 
   const EXCHANGE_RATES = { INR: 1, AED: 0.044, USD: 0.012 };
   const CURRENCY_SYMBOLS = { INR: '₹', AED: 'AED ', USD: '$' };
@@ -27,9 +40,9 @@ const ProductDetailsPreOrder = () => {
     availability: 'Pre-order - Ships March 2026',
     rating: 4.8,
     reviewCount: 1240,
-    description: `The WellnessRing Pro is a revolutionary wearable device that combines cutting-edge biometric sensors with advanced AI to provide real-time emotional intelligence insights. Designed for the modern wellness enthusiast, this sleek ring monitors your physiological responses and translates them into actionable emotional awareness data.
+    description: `The Smart Ring Pro is a revolutionary wearable device that combines cutting-edge biometric sensors with advanced AI to provide real-time emotional intelligence insights. Designed for the modern wellness enthusiast, this sleek ring monitors your physiological responses and translates them into actionable emotional awareness data.
 
-Built with medical-grade sensors and a titanium body, the WellnessRing Pro offers 7-day battery life, water resistance up to 100 meters, and seamless integration with our companion app for comprehensive wellness tracking and journaling.`,
+Built with medical-grade sensors and a titanium body, the Smart Ring Pro offers 7-day battery life, water resistance up to 100 meters, and seamless integration with our companion app for comprehensive wellness tracking and journaling.`,
     features: [
       'Real-time emotion detection and analysis',
       'Heart rate variability monitoring',
@@ -72,7 +85,7 @@ Built with medical-grade sensors and a titanium body, the WellnessRing Pro offer
             Home
           </Link>
           <Icon name="ChevronRight" size={16} className="text-text-tertiary" />
-          <span className="text-text-primary font-medium">WellnessRing Pro</span>
+          <span className="text-text-primary font-medium">Smart Ring Pro</span>
         </nav>
       </div>
 
@@ -165,16 +178,19 @@ Built with medical-grade sensors and a titanium body, the WellnessRing Pro offer
             </div>
 
             {/* Quantity and Add to Cart */}
-            <PreOrderSection
-              quantity={quantity}
-              setQuantity={setQuantity}
-              onAddToCart={handleAddToCart}
-              isAddedToCart={isAddedToCart}
-              price={productData.price}
-              currency={currency}
-              exchangeRate={EXCHANGE_RATES[currency]}
-              currencySymbol={CURRENCY_SYMBOLS[currency]}
-            />
+            <div id="pre-order" className="relative scroll-mt-24">
+              <div id="pricing" className="absolute -top-24"></div>
+              <PreOrderSection
+                quantity={quantity}
+                setQuantity={setQuantity}
+                onAddToCart={handleAddToCart}
+                isAddedToCart={isAddedToCart}
+                price={productData.price}
+                currency={currency}
+                exchangeRate={EXCHANGE_RATES[currency]}
+                currencySymbol={CURRENCY_SYMBOLS[currency]}
+              />
+            </div>
 
             {/* Key Features */}
             <div>
@@ -214,7 +230,7 @@ Built with medical-grade sensors and a titanium body, the WellnessRing Pro offer
           {/* Product Description */}
           <section>
             <h2 className="font-heading font-bold text-2xl lg:text-3xl text-text-primary mb-6">
-              About SmartRing Pro
+              About InnerPulse Pro
             </h2>
             <div className="prose prose-lg max-w-none text-text-secondary">
               <p className="mb-4">{productData.description}</p>
@@ -256,7 +272,7 @@ Built with medical-grade sensors and a titanium body, the WellnessRing Pro offer
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {[
                 {
-                  name: 'WellnessRing Charging Dock',
+                  name: 'Smart Ring Charging Dock',
                   price: 19,
                   image: 'https://m.media-amazon.com/images/I/613svUkqvOL.jpg',
                   description: 'Elegant wireless charging station'
@@ -268,7 +284,7 @@ Built with medical-grade sensors and a titanium body, the WellnessRing Pro offer
                   description: 'Ensure perfect fit before ordering'
                 },
                 {
-                  name: 'WellnessRing Care Kit',
+                  name: 'Smart Ring Care Kit',
                   price: 15,
                   image: 'https://image.made-in-china.com/2f0j00oBplqhNgrFUS/Sr05-Smart-Ring-Health-Tracker-Blood-Pressure-Monitor-Android-ISO-Finger-Rings-Smart-Sleep.webp',
                   description: 'Complete cleaning and maintenance set'

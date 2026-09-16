@@ -40,7 +40,7 @@ const NewsletterSection = () => {
             <Icon name="CheckCircle" size={40} color="white" />
           </div>
           <h2 className="font-heading font-bold text-3xl text-text-primary mb-4">
-            Welcome to the WellnessRing Community!
+            Welcome to the Smart Ring Community!
           </h2>
           <p className="font-body text-lg text-text-secondary mb-8">
             Thank you for subscribing! You'll receive your first wellness insight within 24 hours.

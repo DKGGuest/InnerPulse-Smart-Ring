@@ -32,7 +32,7 @@ const CulturalIntelligenceSection = () => {
     //   name: "Maria Rodriguez",
     //   location: "Barcelona, Spain",
     //   avatar: "https://randomuser.me/api/portraits/women/32.jpg",
-    //   quote: "WellnessRing helped me understand how my Mediterranean lifestyle affects my emotional patterns. The cultural insights are incredibly valuable."
+    //   quote: "Smart Ring helped me understand how my Mediterranean lifestyle affects my emotional patterns. The cultural insights are incredibly valuable."
     // },
     // {
     //   id: 2,
@@ -63,7 +63,7 @@ const CulturalIntelligenceSection = () => {
             Wellness That Understands Your Culture
           </h2>
           <p className="font-body text-lg text-text-secondary max-w-3xl mx-auto">
-            WellnessRing embraces the diversity of human emotional expression, providing culturally-aware insights that honor your background while promoting universal wellness principles.
+            Smart Ring embraces the diversity of human emotional expression, providing culturally-aware insights that honor your background while promoting universal wellness principles.
           </p>
         </div>
 

@@ -7,7 +7,7 @@ const HowItWorksSection = () => {
       id: 1,
       icon: "Smartphone",
       title: "Download & Setup",
-      description: "Download the WellnessRing app and pair your ring in under 2 minutes. Our guided setup ensures optimal sensor calibration for your unique biometric patterns."
+      description: "Download the Smart Ring app and pair your ring in under 2 minutes. Our guided setup ensures optimal sensor calibration for your unique biometric patterns."
     },
     {
       id: 2,
@@ -35,7 +35,7 @@ const HowItWorksSection = () => {
         {/* Header */}
         <div className="text-center mb-16">
           <h2 className="font-heading font-bold text-3xl lg:text-4xl text-text-primary mb-6">
-            How WellnessRing Works
+            How Smart Ring Works
           </h2>
           <p className="font-body text-lg text-text-secondary max-w-3xl mx-auto">
             Experience the future of emotional wellness with our simple 4-step process that transforms your daily routine into a journey of self-discovery and growth.

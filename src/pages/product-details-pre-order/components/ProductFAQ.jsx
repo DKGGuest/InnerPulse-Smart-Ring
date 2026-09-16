@@ -8,21 +8,21 @@ const ProductFAQ = () => {
     {
       id: 1,
       question: 'How accurate is the emotion detection technology?',
-      answer: `The WellnessRing Pro uses advanced biometric sensors combined with machine learning algorithms to achieve 94% accuracy in emotion detection. The system analyzes multiple physiological markers including heart rate variability, skin conductance, and body temperature patterns.
+      answer: `The Smart Ring Pro uses advanced biometric sensors combined with machine learning algorithms to achieve 94% accuracy in emotion detection. The system analyzes multiple physiological markers including heart rate variability, skin conductance, and body temperature patterns.
 
 The ring learns your personal baseline over the first week of use, which significantly improves accuracy for your individual patterns. Clinical studies have shown consistent results across diverse user groups, making it one of the most reliable consumer emotion tracking devices available.`
     },
     {
       id: 2,
       question: 'What is the battery life and how do I charge it?',
-      answer: `The WellnessRing Pro offers up to 7 days of battery life with typical use, including continuous monitoring, sleep tracking, and regular app syncing. Heavy users with frequent notifications and extended workout tracking can expect 5-6 days.
+      answer: `The Smart Ring Pro offers up to 7 days of battery life with typical use, including continuous monitoring, sleep tracking, and regular app syncing. Heavy users with frequent notifications and extended workout tracking can expect 5-6 days.
 
 Charging is simple with the included wireless charging dock. Just place the ring on the dock for 2 hours for a full charge. The ring is also compatible with Qi wireless charging pads for convenience when traveling.`
     },
     {
       id: 3,
       question: 'Is the ring waterproof and can I wear it while swimming?',
-      answer: `Yes, the WellnessRing Pro has an IP68 rating and is water resistant up to 100 meters (330 feet). You can safely wear it while swimming, showering, or during water sports.
+      answer: `Yes, the Smart Ring Pro has an IP68 rating and is water resistant up to 100 meters (330 feet). You can safely wear it while swimming, showering, or during water sports.
 
 The ring continues to track your heart rate and other metrics during swimming, making it perfect for monitoring your wellness during aquatic activities. However, Bluetooth connectivity may be limited underwater, so data will sync once you're back on the surface.`
     },
@@ -36,7 +36,7 @@ If your ring doesn't fit properly, we offer free size exchanges within 30 days o
     {
       id: 5,
       question: 'What smartphones and devices are compatible?',
-      answer: `The WellnessRing Pro is compatible with:
+      answer: `The Smart Ring Pro is compatible with:
 • iOS 14.0 or later (iPhone 8 and newer)
 • Android 8.0 (API level 26) or later
 • Most modern Android devices from major manufacturers
@@ -59,7 +59,7 @@ You can choose to pay in full, set up a 3-payment installment plan, or place a d
     {
       id: 7,
       question: 'What kind of insights and data will I receive?',
-      answer: `The WellnessRing Pro provides comprehensive insights including:
+      answer: `The Smart Ring Pro provides comprehensive insights including:
 
 • Real-time emotion detection and mood patterns
 • Stress level monitoring with personalized alerts
