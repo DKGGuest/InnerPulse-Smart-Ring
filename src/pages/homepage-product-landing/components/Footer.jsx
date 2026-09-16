@@ -15,19 +15,18 @@ const Footer = () => {
     support: [
       { label: 'Help Center', href: '/help-center' },
       { label: 'Contact Us', href: '/contact-us' },
-      { label: 'Shipping Info', href: '#' },
-      { label: 'Returns', href: '#' }
+      { label: 'Shipping Info', href: '/shipping-info' },
+      { label: 'Returns', href: '/returns' }
     ],
     company: [
       { label: 'About Us', href: '/about-us' },
       { label: 'Blog', href: '/research-hub' },
-      { label: 'Careers', href: '#' },
       { label: 'Press', href: '#' }
     ],
     legal: [
       { label: 'Privacy Policy', href: '/privacy-policy' },
       { label: 'Terms of Service', href: '/terms-of-service' },
-      { label: 'Cookie Policy', href: '#' },
+      { label: 'Cookie Policy', href: '/cookie-policy' },
       { label: 'GDPR', href: '#' }
     ]
   };

@@ -27,7 +27,10 @@ import HelpCenter from "pages/help-center";
 import ContactUs from "pages/contact-us";
 import AboutUs from "pages/about-us";
 import TermsOfService from "pages/terms-of-service";
-
+import ShippingInfo from "pages/shipping-info";
+import ReturnsPolicy from "pages/returns-policy";
+import Careers from "pages/careers";
+import CookiePolicy from "pages/cookie-policy";
 
 const Routes = () => {
   return (
@@ -57,6 +60,10 @@ const Routes = () => {
           <Route path="/contact-us" element={<ContactUs />} />
           <Route path="/about-us" element={<AboutUs />} />
           <Route path="/terms-of-service" element={<TermsOfService />} />
+          <Route path="/shipping-info" element={<ShippingInfo />} />
+          <Route path="/returns" element={<ReturnsPolicy />} />
+          <Route path="/careers" element={<Careers />} />
+          <Route path="/cookie-policy" element={<CookiePolicy />} />
         </RouterRoutes>
       </ErrorBoundary>
     </BrowserRouter>
