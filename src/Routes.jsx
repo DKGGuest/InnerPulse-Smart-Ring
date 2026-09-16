@@ -29,8 +29,8 @@ import AboutUs from "pages/about-us";
 import TermsOfService from "pages/terms-of-service";
 import ShippingInfo from "pages/shipping-info";
 import ReturnsPolicy from "pages/returns-policy";
-import Careers from "pages/careers";
 import CookiePolicy from "pages/cookie-policy";
+import GdprCompliance from "pages/gdpr-compliance";
 
 const Routes = () => {
   return (
@@ -62,8 +62,8 @@ const Routes = () => {
           <Route path="/terms-of-service" element={<TermsOfService />} />
           <Route path="/shipping-info" element={<ShippingInfo />} />
           <Route path="/returns" element={<ReturnsPolicy />} />
-          <Route path="/careers" element={<Careers />} />
           <Route path="/cookie-policy" element={<CookiePolicy />} />
+          <Route path="/gdpr" element={<GdprCompliance />} />
         </RouterRoutes>
       </ErrorBoundary>
     </BrowserRouter>

@@ -21,13 +21,13 @@ const Footer = () => {
     company: [
       { label: 'About Us', href: '/about-us' },
       { label: 'Blog', href: '/research-hub' },
-      { label: 'Press', href: '#' }
+      { label: 'Press', href: '#', isComingSoon: true }
     ],
     legal: [
       { label: 'Privacy Policy', href: '/privacy-policy' },
       { label: 'Terms of Service', href: '/terms-of-service' },
       { label: 'Cookie Policy', href: '/cookie-policy' },
-      { label: 'GDPR', href: '#' }
+      { label: 'GDPR', href: '/gdpr' }
     ]
   };
 
@@ -70,7 +70,17 @@ const Footer = () => {
               {contactInfo.map((contact, index) => (
                 <div key={index} className="flex items-center space-x-3">
                   <Icon name={contact.icon} size={16} color="#9CA3AF" />
-                  <span className="font-body text-gray-300 text-sm">{contact.text}</span>
+                  {contact.icon === 'Mail' ? (
+                    <a href={`mailto:${contact.text}`} className="font-body text-gray-300 text-sm hover:text-white transition-colors">
+                      {contact.text}
+                    </a>
+                  ) : contact.icon === 'Phone' ? (
+                    <a href={`tel:${contact.text.replace(/[^0-9+]/g, '')}`} className="font-body text-gray-300 text-sm hover:text-white transition-colors">
+                      {contact.text}
+                    </a>
+                  ) : (
+                    <span className="font-body text-gray-300 text-sm">{contact.text}</span>
+                  )}
                 </div>
               ))}
             </div>
@@ -115,13 +125,23 @@ const Footer = () => {
             <h3 className="font-heading font-semibold text-lg mb-4">Company</h3>
             <ul className="space-y-3">
               {footerLinks.company.map((link, index) => (
-                <li key={index}>
+                <li key={index} className="flex items-center">
                   <Link
                     to={link.href}
-                    className="font-body text-gray-300 hover:text-white gentle-transition text-sm"
+                    onClick={link.isComingSoon ? (e) => e.preventDefault() : undefined}
+                    className={`font-body text-sm gentle-transition ${
+                      link.isComingSoon
+                        ? 'text-gray-500 cursor-not-allowed'
+                        : 'text-gray-300 hover:text-white'
+                    }`}
                   >
                     {link.label}
                   </Link>
+                  {link.isComingSoon && (
+                    <span className="ml-2 px-2 py-0.5 text-[10px] uppercase tracking-wider font-semibold bg-gray-800 text-gray-400 rounded-organic">
+                      Soon
+                    </span>
+                  )}
                 </li>
               ))}
             </ul>

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import Icon from 'components/AppIcon';
 
@@ -80,6 +80,11 @@ const HelpCenter = () => {
               placeholder="Search for articles, troubleshooting, or FAQs..."
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
+              onKeyDown={(e) => {
+                if (e.key === 'Enter') {
+                  document.getElementById('faq-section').scrollIntoView({ behavior: 'smooth' });
+                }
+              }}
               className="block w-full pl-12 pr-4 py-4 rounded-organic border-0 ring-1 ring-inset ring-transparent focus:ring-2 focus:ring-inset focus:ring-primary shadow-soft-elevation-3 bg-white text-text-primary placeholder:text-text-tertiary sm:text-lg transition-all"
             />
           </div>
