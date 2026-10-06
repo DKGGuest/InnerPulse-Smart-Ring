@@ -6,7 +6,7 @@ const OrderNow = () => {
   const { name, image, price, selectedPayment, currencySymbol } = location.state || {
     name: "InnerPulse Smart Ring",
     image: "/assets/images/ProductShowcaseRing.png",
-    price: 3999,
+    price: 5999,
     selectedPayment: undefined,
     currencySymbol: '₹'
   };
