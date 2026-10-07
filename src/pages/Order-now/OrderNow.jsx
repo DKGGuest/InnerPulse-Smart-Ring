@@ -40,7 +40,7 @@ const OrderNow = () => {
         <p className="text-lg text-text-secondary mb-6 animate-fade-in delay-300 text-center">
           Experience the next generation of wellness technology. Order your {name} now and get it delivered fast!
         </p>
-        <div className="text-xl font-bold mb-6 text-primary">{currencySymbol}{price}</div>
+        <div className="text-xl font-bold mb-6 text-primary">{currencySymbol}{currencySymbol === '₹' ? price : price.toFixed(2)}</div>
         <button
           className="w-full inline-flex items-center justify-center space-x-2 px-8 py-4 bg-primary text-text-inverse rounded-organic font-body font-semibold gentle-transition haptic-feedback hover:bg-primary-600 disabled:opacity-50 disabled:cursor-not-allowed text-lg animate-fade-in delay-400 transition-all duration-300 hover:scale-[1.03]"
           onClick={() => alert('Order placed!')}

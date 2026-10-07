@@ -27,7 +27,7 @@ const ProductDetailsPreOrder = () => {
     }
   }, [location.hash]);
 
-  const EXCHANGE_RATES = { INR: 1, AED: 0.044, USD: 0.012 };
+  const EXCHANGE_RATES = { INR: 1, AED: 0.0380746, USD: 0.0103317 };
   const CURRENCY_SYMBOLS = { INR: '₹', AED: 'AED ', USD: '$' };
 
   const productData = {
@@ -131,14 +131,17 @@ Built with medical-grade sensors and a titanium body, the Smart Ring Pro offers 
               <div className="flex flex-col mb-6">
                 <div className="flex items-center justify-between w-full mb-2">
                   <div className="flex items-center space-x-3">
-                    <span className="font-heading font-bold text-3xl text-text-primary">
-                      {CURRENCY_SYMBOLS[currency]}{Math.round(productData.price * EXCHANGE_RATES[currency])}
-                    </span>
+                    <div className="flex items-baseline space-x-1">
+                      <span className="font-heading font-bold text-3xl text-text-primary">
+                        {CURRENCY_SYMBOLS[currency]}{(productData.price * EXCHANGE_RATES[currency]).toFixed(currency === 'INR' ? 0 : 2)}
+                      </span>
+                      <span className="text-sm font-medium text-text-secondary">+ taxes</span>
+                    </div>
                     <span className="text-lg text-text-tertiary line-through">
-                      {CURRENCY_SYMBOLS[currency]}{Math.round(productData.originalPrice * EXCHANGE_RATES[currency])}
+                      {CURRENCY_SYMBOLS[currency]}{(productData.originalPrice * EXCHANGE_RATES[currency]).toFixed(currency === 'INR' ? 0 : 2)}
                     </span>
                     <span className="bg-success-light text-success-dark px-2 py-1 rounded-organic text-sm font-medium">
-                      Save {CURRENCY_SYMBOLS[currency]}{Math.round((productData.originalPrice - productData.price) * EXCHANGE_RATES[currency])}
+                      Save {CURRENCY_SYMBOLS[currency]}{((productData.originalPrice - productData.price) * EXCHANGE_RATES[currency]).toFixed(currency === 'INR' ? 0 : 2)}
                     </span>
                   </div>
                   <select 

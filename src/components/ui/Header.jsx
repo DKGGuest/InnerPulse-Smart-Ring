@@ -12,7 +12,7 @@ const Header = () => {
       id: 1,
       name: 'InnerPulse',
       quantity: 1,
-      price: 3499
+      price: 5999
     }
   ]);
   const cartItemCount = cartItems.length;
